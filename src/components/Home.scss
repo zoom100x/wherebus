@@ -1,0 +1,154 @@
+@import '../globale.scss';
+.home-container{
+    width: 100vw;
+    height: 100vh;
+    box-sizing: content-box;
+    background-image: url("../images/bus.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    padding-bottom: 200px;
+    transition: background-image 0.3s ease;
+    .card-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 450px;
+        padding: 10px 20px 30px 20px;
+        border-radius: 20px;
+        margin: 160px 0 0 180px;
+        background-color: rgb(255, 255, 255);
+        .sections{
+            display: flex;
+            padding-top: 30px;
+            padding: 30px 10px 20px 10px;
+            width: 100%;
+            .section1{
+                display: flex;
+                margin: 0 20px;
+                cursor: pointer;
+                flex-direction: column;
+                align-items: center;
+                width: 50%;
+                color: black;
+                font-weight: 500;
+                font-size: 1.1em;
+                i{
+                    font-size: 1.8em;
+                }
+                p{
+                    text-align: center;
+                }
+            }
+        }
+        .line{
+            display: flex;
+            width: 90%;
+            height: 2px;
+            background-color: rgb(199, 199, 199);
+            position: relative;
+            .active-line{
+                position: absolute;
+                left: 4%;
+                width: 40%;
+                height: 130%;
+                background-color: black;
+                transition: left .4s ease;
+            }
+            .active-line.otherSection{
+                left: 58%;
+            }
+        }
+        .title-container{
+            padding: 40px 30px 10px 30px;
+            
+            .title{
+                margin-top: 15px;
+                font-size: 2rem;
+            }
+            .description{
+                margin-top: 40px;
+                font-size: 1rem;
+                color: gray;
+            }
+            .btn1{
+                display: block;
+                width: fit-content;
+                font-weight: 700;
+                font-size: 1rem;
+                margin-top: 30px;
+                background-color: black;
+                color: white;
+                padding: 10px 15px;
+                transition: background-color 0.3s ease;
+                &:hover{
+                    background-color: rgb(24, 24, 24);
+                }
+            }
+            .btn2{
+                display: block;
+                width: fit-content;
+                margin-top: 30px;
+                position: relative;
+                transition: 0.3s ease;
+                &::after{
+                    position: absolute;
+                    content: '';
+                    left: 0;
+                    bottom: -5px;
+                    width: 100%;
+                    height: 1px;
+                    background-color: black;
+                }
+                &:hover{
+                    opacity: 0.6;
+                }
+            }
+            &.otherTitle{
+                .title{
+                    font-size: 2.3em;
+                }
+                .description{
+                    font-size: 1.1em;
+                }
+                .btn1{
+                    font-size: 1.3em;
+                    padding: 15px 20px;
+                }
+            }
+        }
+    }
+    .phone-bg{
+        display: none;
+    }
+}
+.home-container.otherImage{
+    background-image: url("../images/bus-station.jpg");
+    transition: background-image 0.3s ease;
+}
+@media only screen and (max-width: $breakpoint-tablet){
+    .home-container{
+        background-image: none;
+        background-color: black;
+        .card-container{
+            width: 100%;
+            margin: 70px 0 0 0;
+            border-radius: 0;
+        }
+        .phone-bg{
+            display: block;
+            width: 100%;
+            height: 300px;
+            background-image: url(../images/bus.jpg);
+            background-size: cover;
+            transition: all 0.5s ease;
+        }
+    }
+    .home-container.otherImage{
+        background-image: none;
+        background-color: black;
+        .phone-bg{
+            background-image: url(../images/bus-station.jpg);
+        }
+    }
+}

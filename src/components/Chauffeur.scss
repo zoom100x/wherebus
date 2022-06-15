@@ -1,0 +1,39 @@
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    label{
+        margin-top: 30px;
+    }
+    select{
+        margin-top: 10px;
+        width: 100px;
+        height: 50px;
+        text-align: center;
+        font-size: 1.1em;
+    }
+    button{
+        margin-top: 30px;
+        border: none;
+        background-color: black;
+        color: white;
+        font-size: 1.3em;
+        padding: 10px 15px;
+        cursor: pointer;
+    }
+    button.stopBtn{
+        background-color: rgb(238, 75, 75);
+        font-size: 1.1em;
+    }
+    button:disabled{
+        background-color: rgba(0, 0, 0, 0.432);
+        cursor: not-allowed;
+    }
+    button.signout{
+        background-color: rgb(238, 75, 75);
+        font-size: 1.1em;
+    }
+}

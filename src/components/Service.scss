@@ -1,0 +1,139 @@
+@import "../globale.scss";
+.service-container {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  .map-container{
+    width: 100%;
+    height: 100%;
+    .user-pin{
+      font-size: 2em;
+    }
+  }
+  .card-container {
+    width: 400px;
+    height: 85vh;
+    position: absolute;
+    top: 80px;
+    left: 50px;
+    z-index: 1;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 15px 10px;
+    border-radius: 20px;
+    h1 {
+      font-size: 2em;
+      font-weight: 300;
+      margin-left: 15px;
+    }
+
+    .input-container {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      .input1 {
+        position: relative;
+        width: 100%;
+        input {
+          width: 100%;
+          height: 50px;
+          background-color: $gray-white;
+          padding-left: 50px;
+          border: 2px solid rgba(0, 0, 0, 0);
+          transition: 0.3s ease;
+          &:focus {
+            border: 2px solid rgb(0, 0, 0);
+            outline: none;
+          }
+          &::placeholder {
+            font-weight: 400;
+            font-size: 1.05em;
+            color: rgba(0, 0, 0, 0.6);
+          }
+        }
+        .square {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          left: 15px;
+          font-weight: bold;
+        }
+      }
+      .input2 {
+        margin-top: 20px;
+        position: relative;
+        width: 100%;
+        input {
+          width: 100%;
+          height: 50px;
+          background-color: $gray-white;
+          padding-left: 50px;
+          border: 2px solid rgba(0, 0, 0, 0);
+          transition: 0.3s ease;
+          &:focus {
+            border: 2px solid rgb(0, 0, 0);
+            outline: none;
+          }
+          &::placeholder {
+            font-weight: 400;
+            font-size: 1.05em;
+            color: rgba(0, 0, 0, 0.6);
+          }
+        }
+        .circle {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          left: 15px;
+          font-weight: bold;
+        }
+      }
+      .line {
+        position: absolute;
+        top: 48%;
+        transform: translateY(-50%);
+        left: 22px;
+        width: 2px;
+        height: 50px;
+        background-color: black;
+        z-index: 2;
+      }
+    }
+    .suggestions {
+      margin-top: 30px;
+      overflow-y: scroll;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+}
+.popup{
+  padding-top: 30px;
+  .divider{
+    margin: 20px 0;
+  }
+}
+
+@media only screen and (max-width: $breakpoint-tablet){
+.service-container{
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  .map-container{
+    width: 100%;
+    height: 40%;
+  }
+  .card-container{
+    position: static;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60%;
+  }
+}
+}

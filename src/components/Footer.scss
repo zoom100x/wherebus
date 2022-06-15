@@ -1,0 +1,100 @@
+@import '../globale.scss';
+
+.footer-container{
+    display: flex;
+    width: 100vw;
+    background-color: black;
+    color: $primary_color2;
+    justify-content: space-between;
+    padding: 20px 40px 10px 40px;
+    .container1{
+        color: $primary_color2;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        h1{
+            font-size: 1.4em;
+        }
+        p{
+            font-size: 12px;
+            color: gray;
+        }
+    }
+    .container2{
+        color: white;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        .social-icon{
+            margin-top: 20px;
+            a{
+                margin-right: 10px;
+                font-size: 24px;
+                color: white;
+            }
+        }
+        
+    }
+    .container3{
+        display: flex;
+        justify-content: end;
+        align-items: flex-end;
+        color: white;
+        ul{
+            display: flex;
+            margin-bottom: 15px;
+            li{
+                a{
+                    width: fit-content;
+                    color: gray;
+                }
+                margin-right: 25px;
+                font-size: 12px;
+                list-style: none;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $breakpoint-tablet){
+    .footer-container{
+        flex-direction: column-reverse;
+        justify-content: center;
+        .container3{
+            justify-content: center;
+        }
+        .container2{
+            margin-top: 30px;
+        }
+        .container1{
+            p{
+                margin-top: 30px;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 400px){
+    .footer-container{
+        .container1{
+            align-items: start;
+            p{
+                align-self: start;
+            }
+        }
+        .container2{
+            align-items: start;
+        }
+        .container3{
+            align-self: start;
+            ul{
+                align-items: start;
+                flex-direction: column;
+                li{
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}

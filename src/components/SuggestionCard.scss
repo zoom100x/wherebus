@@ -1,0 +1,42 @@
+@import '../globale.scss';
+.button-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 0 10px;
+    margin-top: 15px;
+    border-radius: 0;
+    transition: all 0.5s ease;
+    &:hover{
+        background-color: rgb(241, 241, 241);
+        border-radius: 10px;
+    }
+    .icon-location{
+        background-color: $gray-white;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        position: relative;
+        i{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            font-size: 1.5em;
+        }
+    }
+    .info{
+        width: 80%;
+        margin-left: 20px;
+        padding: 10px 0;
+        border-bottom: 1px solid $gray-white;
+        h2{
+            font-size: 1.05em;
+        }
+        p{
+            font-size: medium;
+            color: rgb(94, 94, 94);
+        }
+    }
+}

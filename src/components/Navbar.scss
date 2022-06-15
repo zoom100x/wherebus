@@ -1,0 +1,168 @@
+@import "../globale.scss";
+.navbar_container {
+  display: block;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  height: 64px;
+  width: 100vw;
+  background-color: $primary_color;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 50px;
+  .navbar_logo {
+    h1 {
+      color: $primary_color2;
+      font-size: 1.4em;
+    }
+  }
+  .navbar_items {
+    ul {
+      display: flex;
+      li {
+        &:first-child{
+          a.hidden{
+            display: none;
+          }
+        }
+        &:nth-child(2){
+          a.dashboard{
+            padding: 5px 0 0 10px ;
+            i{
+              font-size: 1.1em;
+            }
+            p{
+              display: none;
+            }
+          }
+        }
+        a {
+          display: flex;
+          align-items: center;
+          padding: 7px 15px;
+          font-weight: 600;
+          font-size: 0.95em;
+          color: $primary_color2;
+          border-radius: 20px;
+          transition: 0.2s ease-in;
+          &:hover {
+            background-color: $primary_color2;
+            color: black;
+          }
+          i {
+            padding-right: 10px;
+          }
+        }
+        margin: 0 10px;
+        display: flex;
+        align-items: center;
+        list-style: none;
+        color: $primary_color2;
+        &:nth-last-child(1) {
+          button {
+            background-color: white;
+            color: black;
+            padding: 7px 15px;
+            border-radius: 20px;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s ease;
+            &.hidden{
+              display: none;
+            }
+            &:hover {
+              background-color: rgb(235, 235, 235);
+              color: rgba(0, 0, 0, 0.76);
+            }
+          }
+        }
+        &:nth-child(3) {
+          display: none;
+        }
+      }
+    }
+  }
+}
+.navbar_container.inMap {
+  background-color: #00000000;
+  padding: 0 10px;
+  .navbar_logo h1 {
+    color: black;
+  }
+  .navbar_items ul li {
+    display: none;
+  }
+  .navbar_items ul li:nth-child(3) {
+      display: block;
+      a{
+        color: black;
+        font-size: 1.1em;
+        transition: 0.3s ease;
+        &:hover{
+            background-color: black;
+            color: white;
+        }
+      }
+   
+  }
+  .navbar_items ul li:nth-child(4) {
+    display: none;
+  }
+}
+@media only screen and (max-width: $breakpoint-tablet) {
+  .navbar_container {
+    height: 70px;
+    .navbar_items {
+      ul {
+        align-items: center;
+        li {
+          &:nth-child(1),
+          &:nth-child(2) {
+            display: none;
+          }
+          &:nth-child(3) {
+            display: inherit;
+            font-size: 1.6em;
+          }
+          &:nth-child(4) {
+            a {
+              font-size: 1.1em;
+              font-weight: 300;
+              padding: 10px 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: $breakpoint-phone) {
+  .navbar_container {
+    height: 70px;
+    padding-left: 20px;
+    padding-right: 0;
+    .navbar_items {
+      ul {
+        align-items: center;
+        li {
+          &:nth-child(1),
+          &:nth-child(2) {
+            display: none;
+          }
+          &:nth-child(3) {
+            display: inherit;
+            font-size: 1.6em;
+          }
+          &:nth-child(4) {
+            a {
+              font-size: 1em;
+              font-weight: 300;
+              padding: 10px 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

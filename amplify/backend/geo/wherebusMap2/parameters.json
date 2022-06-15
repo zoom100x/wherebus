@@ -1,0 +1,11 @@
+{
+  "authRoleName": {
+    "Ref": "AuthRoleName"
+  },
+  "unauthRoleName": {
+    "Ref": "UnauthRoleName"
+  },
+  "mapName": "wherebusMap2",
+  "mapStyle": "VectorEsriLightGrayCanvas",
+  "isDefault": true
+}

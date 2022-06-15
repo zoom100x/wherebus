@@ -1,0 +1,21 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-wherebusreact-dev-31723-authRole",
+      "UnauthRoleArn": "arn:aws:iam::901620471572:role/amplify-wherebusreact-dev-31723-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::901620471572:role/amplify-wherebusreact-dev-31723-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-wherebusreact-dev-31723-deployment",
+      "UnauthRoleName": "amplify-wherebusreact-dev-31723-unauthRole",
+      "StackName": "amplify-wherebusreact-dev-31723",
+      "StackId": "arn:aws:cloudformation:us-east-1:901620471572:stack/amplify-wherebusreact-dev-31723/26514490-e21a-11ec-873e-0e66a0c7cf51",
+      "AmplifyAppId": "d2z4tegvr33fa4"
+    },
+    "categories": {
+      "auth": {
+        "wherebusreact24d8db8d": {},
+        "true": {}
+      }
+    }
+  }
+}

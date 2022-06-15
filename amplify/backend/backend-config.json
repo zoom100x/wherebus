@@ -1,0 +1,62 @@
+{
+  "auth": {
+    "wherebusreact24d8db8d": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "frontendAuthConfig": {
+        "socialProviders": [],
+        "usernameAttributes": [],
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": []
+        },
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      }
+    }
+  },
+  "geo": {
+    "wherebusMap": {
+      "isDefault": false,
+      "providerPlugin": "awscloudformation",
+      "service": "Map",
+      "mapStyle": "VectorEsriStreets",
+      "accessType": "AuthorizedAndGuestUsers",
+      "dependsOn": [
+        {
+          "category": "auth",
+          "resourceName": "wherebusreact24d8db8d",
+          "attributes": [
+            "UserPoolId"
+          ]
+        }
+      ]
+    },
+    "wherebusMap2": {
+      "isDefault": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Map",
+      "mapStyle": "VectorEsriLightGrayCanvas",
+      "accessType": "AuthorizedAndGuestUsers",
+      "dependsOn": [
+        {
+          "category": "auth",
+          "resourceName": "wherebusreact24d8db8d",
+          "attributes": [
+            "UserPoolId"
+          ]
+        }
+      ]
+    }
+  }
+}
